@@ -1,7 +1,21 @@
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./Memories.css";
 
 function Memories() {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleVideoClick = () => {
+    if (!videoRef.current) return;
+
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  };
+
   return (
     <section className="memories">
 
@@ -19,7 +33,7 @@ function Memories() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        Your First Birthday clip ❤️
+        Our Little Memories ❤️
       </motion.h2>
 
       <motion.p
@@ -31,7 +45,6 @@ function Memories() {
         Some moments are too special to put into words.
       </motion.p>
 
-      {/* Video Memory */}
       <motion.div
         className="memory-video-card"
         initial={{ opacity: 0, y: 40 }}
@@ -40,21 +53,20 @@ function Memories() {
         transition={{ duration: 0.8 }}
       >
         <video
-          controls
+          ref={videoRef}
+          controls={!isPlaying}
           playsInline
           className="memory-video"
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+          onClick={handleVideoClick}
         >
-          <source
-            src="/memories/clip.mp4"
-            type="video/mp4"
-          />
+          <source src="/memories/clip.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <p>
           One of those moments I want to keep forever. ❤️
-          This was your first birthday with me , jab hum main gate wali canteen me bethe the or tum apne dost chetan se baat kr rhe the .and your hand was romancing with me or mai video bna rahi tha
-
         </p>
       </motion.div>
 
