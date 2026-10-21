@@ -1,0 +1,122 @@
+.opening {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+ background:
+  radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 25%),
+  radial-gradient(circle at 80% 30%, #ffd6e5 0%, transparent 30%),
+  linear-gradient(135deg, #ffe4ec, #fff7f9, #ffdce8);
+
+  color: #6b3045;
+  overflow: hidden;
+  position: relative;
+}
+
+.opening::before {
+  content: "♥  ♥  ♥  ♥  ♥";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 50px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.bubu-dudu {
+  margin-bottom: 25px;
+}
+
+.bubu-dudu img {
+  width: 260px;
+  max-width: 80vw;
+  border-radius: 20px;
+  display: block;
+}
+
+.opening h1 {
+  font-size: 42px;
+  margin: 10px 0;
+  font-family: Georgia, serif;
+}
+
+.opening p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.surprise-button {
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+
+  background: #ff6f91;
+  color: white;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(255, 111, 145, 0.3);
+}
+
+.hearts {
+  position: absolute;
+  top: 15%;
+  right: 20%;
+
+  font-size: 35px;
+}
+
+@media (max-width: 600px) {
+  .opening h1 {
+    font-size: 32px;
+  }
+
+  .opening p {
+    font-size: 17px;
+    padding: 0 20px;
+  }
+
+  .bubu-dudu img {
+    width: 220px;
+  }
+
+  .surprise-button {
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .opening::before {
+    letter-spacing: 20px;
+    font-size: 18px;
+  }
+}
+
+/* Heart explosion */
+
+.heart-explosion {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.heart-explosion span {
+  position: absolute;
+
+  font-size: 28px;
+
+  user-select: none;
+}

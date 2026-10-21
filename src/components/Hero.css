@@ -1,0 +1,213 @@
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 30%),
+    radial-gradient(circle at 80% 70%, #ffdce8 0%, transparent 35%),
+    linear-gradient(135deg, #fff7f9, #ffe7ef, #fff5f7);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+
+  color: #633344;
+}
+
+/* =========================
+   PORTRAIT PHOTO
+   ========================= */
+
+.boyfriend-photo {
+  width: 180px;
+  height: 220px;
+
+  margin: 12px 0 20px;
+  padding: 5px;
+
+  background: linear-gradient(
+    135deg,
+    #f6a6bb,
+    #e85d82,
+    #ffd6e2
+  );
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 30px rgba(180, 80, 110, 0.2);
+
+  overflow: hidden;
+}
+
+.boyfriend-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 17px;
+  display: block;
+}
+
+/* =========================
+   INTRO TEXT
+   ========================= */
+
+.hero-small {
+  font-size: 18px;
+  color: #a75d73;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   MAIN HEADING
+   ========================= */
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  line-height: 1.15;
+  margin: 10px 0 25px;
+}
+
+.hero h1 span {
+  color: #e85d82;
+}
+
+/* =========================
+   MAIN MESSAGE
+   ========================= */
+
+.hero-message {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #76505d;
+}
+
+/* =========================
+   DECORATIVE LINE
+   ========================= */
+
+.hero-line {
+  height: 2px;
+  background: #e89aae;
+  margin: 30px 0;
+}
+
+/* =========================
+   BOTTOM MESSAGE
+   ========================= */
+
+.hero-bottom {
+  font-size: 16px;
+  color: #9b6877;
+}
+
+/* =========================
+   FLOATING HEARTS
+   ========================= */
+
+.hero-heart {
+  position: absolute;
+  font-size: 70px;
+  color: #f19ab1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-heart-one {
+  top: 15%;
+  right: 15%;
+}
+
+.hero-heart-two {
+  bottom: 15%;
+  left: 15%;
+  font-size: 50px;
+}
+
+/* =========================
+   SCROLL HINT
+   ========================= */
+
+.scroll-hint {
+  position: absolute;
+  bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #a75d73;
+  font-size: 14px;
+}
+
+.arrow {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 35px 18px;
+  }
+
+  .hero-small {
+    font-size: 16px;
+  }
+
+  .boyfriend-photo {
+    width: 145px;
+    height: 180px;
+
+    margin: 10px 0 15px;
+    padding: 4px;
+
+    border-radius: 20px;
+  }
+
+  .boyfriend-photo img {
+    border-radius: 16px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-message {
+    font-size: 17px;
+  }
+
+  .hero-heart-one {
+    right: 7%;
+    top: 12%;
+    font-size: 45px;
+  }
+
+  .hero-heart-two {
+    left: 7%;
+    bottom: 15%;
+    font-size: 35px;
+  }
+
+  .hero-bottom {
+    font-size: 14px;
+  }
+
+  .scroll-hint {
+    bottom: 20px;
+    font-size: 13px;
+  }
+
+  .arrow {
+    font-size: 22px;
+  }
+}

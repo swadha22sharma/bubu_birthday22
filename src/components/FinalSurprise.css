@@ -1,0 +1,128 @@
+.final-surprise {
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      #ffffff 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      #ffd9e5 0%,
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fff4f7,
+      #ffe5ed
+    );
+
+  overflow: hidden;
+}
+
+/* =========================
+   INITIAL CAKE SCREEN
+========================= */
+
+.cake-only {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+.make-wish {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  color: #633344;
+
+  margin: 0 0 45px;
+  line-height: 1.2;
+}
+
+.big-cake {
+  font-size: 150px;
+  line-height: 1;
+
+  cursor: pointer;
+  user-select: none;
+
+  filter: drop-shadow(
+    0 20px 25px rgba(100, 50, 70, 0.18)
+  );
+}
+
+.tap-hint {
+  margin: 35px 0 0;
+
+  color: #e85d82;
+  font-size: 18px;
+
+  animation: wishPulse 1.8s infinite;
+}
+
+@keyframes wishPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .make-wish {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+
+  .big-cake {
+    font-size: 115px;
+  }
+
+  .tap-hint {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .big-cake {
+    font-size: 120px;
+  }
+
+  .birthday-message {
+    padding: 45px 25px;
+    border-radius: 25px;
+  }
+
+  .birthday-message h2 {
+    font-size: 36px;
+  }
+
+  .birthday-message p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,148 @@
+.song {
+  min-height: 100vh;
+  padding: 100px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(circle at 15% 20%, #ffffff 0%, transparent 25%),
+    radial-gradient(circle at 85% 80%, #ffd6e4 0%, transparent 30%),
+    linear-gradient(135deg, #fff0f5, #ffe3ec);
+
+  color: #633344;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Small heading */
+
+.song-small {
+  color: #a75d73;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* Main heading */
+
+.song h2 {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  margin: 10px 0 50px;
+  color: #633344;
+}
+
+/* Song card */
+
+.song-card {
+  width: 100%;
+  max-width: 700px;
+  min-height: 380px;
+  padding: 60px 50px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 25px 60px rgba(100, 50, 70, 0.14);
+
+  position: relative;
+}
+
+/* Music icon */
+
+.music-icon {
+  font-size: 70px;
+  color: #e85d82;
+  margin-bottom: 15px;
+
+  animation: musicFloat 3s ease-in-out infinite;
+}
+
+@keyframes musicFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Song title */
+
+.song-card h3 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  margin: 10px 0 12px;
+  color: #633344;
+}
+
+/* Description */
+
+.song-card p {
+  color: #76505d;
+  font-size: 18px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Audio player */
+
+.song-player {
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+  z-index: 10;
+}
+
+.song-player audio {
+  width: 100%;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .song {
+    min-height: 100vh;
+    padding: 80px 20px;
+  }
+
+  .song h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .song-card {
+    min-height: 350px;
+    padding: 45px 25px;
+    border-radius: 25px;
+  }
+
+  .music-icon {
+    font-size: 60px;
+  }
+
+  .song-card h3 {
+    font-size: 27px;
+  }
+
+  .song-card p {
+    font-size: 16px;
+  }
+}

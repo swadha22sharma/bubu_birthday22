@@ -1,0 +1,112 @@
+.love-letter {
+  min-height: 100vh;
+
+  padding: 100px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      #fff 0%,
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #fff5f8,
+      #ffe6ee
+    );
+
+  color: #633344;
+}
+
+.letter-container {
+  width: 100%;
+  max-width: 750px;
+
+  padding: 60px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px rgba(100, 50, 70, 0.12);
+
+  position: relative;
+}
+
+.letter-heart {
+  font-size: 55px;
+  color: #e85d82;
+
+  margin-bottom: 10px;
+}
+
+.letter-small {
+  color: #a75d73;
+  font-size: 16px;
+}
+
+.letter-container h2 {
+  font-family: Georgia, serif;
+
+  font-size: 42px;
+
+  margin: 15px 0 35px;
+
+  color: #633344;
+}
+
+.letter-content {
+  text-align: left;
+
+  color: #76505d;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+}
+
+.letter-content p {
+  margin-bottom: 22px;
+}
+
+.letter-ending {
+  color: #633344;
+}
+
+.letter-signature {
+  margin-top: 40px;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+
+  color: #a75d73;
+
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .love-letter {
+    padding: 70px 20px;
+  }
+
+  .letter-container {
+    padding: 40px 25px;
+  }
+
+  .letter-container h2 {
+    font-size: 32px;
+  }
+
+  .letter-content {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}

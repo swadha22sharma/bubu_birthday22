@@ -1,0 +1,171 @@
+.story {
+  min-height: 100vh;
+
+  padding: 100px 20px;
+
+  background: #fffafa;
+
+  color: #633344;
+
+  text-align: center;
+}
+
+.story-small {
+  color: #a75d73;
+  font-size: 17px;
+}
+
+.story h2 {
+  font-family: Georgia, serif;
+
+  font-size: 48px;
+
+  margin: 10px 0 70px;
+}
+
+.timeline {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+/* Vertical line */
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background: #f0b6c5;
+
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+
+  padding: 20px 40px;
+
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+
+  text-align: left;
+}
+
+/* Heart in the middle */
+
+.timeline-dot {
+  position: absolute;
+
+  top: 25px;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 4px 15px rgba(100, 50, 70, 0.12);
+
+  z-index: 2;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -18px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -18px;
+}
+
+/* Cards */
+
+.timeline-card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(100, 50, 70, 0.08);
+}
+
+.timeline-card h3 {
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+
+  margin: 0 0 10px;
+
+  color: #e85d82;
+}
+
+.timeline-card p {
+  color: #76505d;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .story h2 {
+    font-size: 38px;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+
+    left: 0;
+
+    padding-left: 55px;
+    padding-right: 0;
+
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 0;
+    right: auto;
+  }
+}
