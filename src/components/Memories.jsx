@@ -19,7 +19,7 @@ function Memories() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        Our Little Memories ❤️
+        Your First birthday Clip..❤️
       </motion.h2>
 
       <motion.p
@@ -48,7 +48,12 @@ function Memories() {
         </video>
 
         <p>
-          One of those moments I want to keep forever. ❤️
+          One of those moments I want to keep forever. 
+          <br />
+          jab hum main gate wali canteen me bethe or tum apne dost chetan se baat kr rhe the or mere hath se sath tum pyaar kr rhe the .... 
+          <br />
+          bhot chhoti si yaad hai 
+          pr bhot yaad aati hai or phle birthday tumhara uske sath se ye third birthday mai tumhare sath celebrate ni kr payi ....❤️
         </p>
       </motion.div>
 
