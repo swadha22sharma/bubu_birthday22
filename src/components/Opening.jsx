@@ -63,7 +63,6 @@ function Opening({ onOpen }) {
         <br />
         we only celebrated your first birthday together and today is your 3rd birthday with me ......
         <br />
-        i hope you will love this.... bubu
   
       </motion.p>
 

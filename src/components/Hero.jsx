@@ -42,7 +42,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-         mera susu mumu ka janamdin hai... ✨
+        mera susu mumu ka janamdin hai... ✨
       </motion.p>
 
       {/* His photo */}
@@ -106,7 +106,8 @@ function Hero() {
         To the person who makes my world a little brighter,
         <br />
         my days a little happier, and my heart very full. 🥹
-        <br></br>my life's bestest achievement......
+        <br />
+        my life's bestest achievement......
       </motion.p>
 
       {/* Decorative line */}
