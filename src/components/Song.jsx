@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import "./Song.css";
-import songFile from "../assets/song/our-song.mp3";
+import songFile from "../assets/Song/our-song.mp3";
 
 function Song() {
   return (
