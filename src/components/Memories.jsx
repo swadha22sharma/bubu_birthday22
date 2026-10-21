@@ -1,21 +1,7 @@
-import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./Memories.css";
 
 function Memories() {
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handleVideoClick = () => {
-    if (!videoRef.current) return;
-
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
-  };
-
   return (
     <section className="memories">
 
@@ -53,13 +39,9 @@ function Memories() {
         transition={{ duration: 0.8 }}
       >
         <video
-          ref={videoRef}
-          controls={!isPlaying}
+          controls
           playsInline
           className="memory-video"
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-          onClick={handleVideoClick}
         >
           <source src="/memories/clip.mp4" type="video/mp4" />
           Your browser does not support the video tag.
